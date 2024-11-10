@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', async() => {
-	let qtailJsVersion = '1.0.0';
-	const qtail = (await import(`https://jsd.xsawa.us.kg/npm/qtail-js@${qtailJsVersion}/index.min.mjs`)).default;
+	const jsdCdn = 'https://jsd.xsawa.us.kg/';
+	const qtail = (await import(`${jsdCdn}npm/qtail-js/index.min.mjs`)).default;
+	const qtailManifest = await (await fetch(`${jsdCdn}npm/qtail-js/package.json`)).json();
+	const qtailJsVersion = qtailManifest.version;
 
 	const cssEntry = document.querySelector('#inpage-css-entry');
 	const mainWindow = document.querySelector('main');
