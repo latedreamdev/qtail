@@ -1,0 +1,60 @@
+<!doctype html><html lang="zh-Hans-CN">
+	<head>
+		<meta charset="utf-8" />
+		<title>qtail</title>
+		<meta name="author" content="LateDream" />
+		<meta name="description" content="给你的qq昵称加上小尾巴" />
+		<meta name="keywords" content="qtail, qq昵称, qq昵称小尾巴, qq小尾巴, qq尾巴, qq昵称尾巴, qq小尾巴生成器, qq尾巴生成器, qq昵称尾巴生成器" />
+		<meta name="license" content="MPL-2.0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" href="./favicon.png" />
+		<link rel="apple-touch-icon" href="./favicon.png" type="image/png" />
+		<link rel="manifest" href="./qtail.webmanifest" type="application/manifest+json" />
+		<style type="text/css" id="inpage-css-entry">
+			body {
+				background: url(./assets/images/img0.jpg) fixed no-repeat center center;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<span class="header_panel">
+				<header style="display: inline-flex;"><img src="./favicon.png" alt="qtail" draggable="false" class="appicon" /> <span style="margin-left: 2px;">qtail</span> <span id="version"></span></span></header>
+				<span class="btns_panel">
+					<button class="icon" type="button" title="最小化" id="min-btn">
+						<svg fill="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m3.5 8c-0.0684 0-0.133-0.013-0.195-0.0391-0.0586-0.026-0.111-0.0618-0.156-0.107-0.0456-0.0456-0.0814-0.0977-0.107-0.156-0.026-0.0618-0.0391-0.127-0.0391-0.195s0.013-0.132 0.0391-0.19c0.026-0.0618 0.0618-0.116 0.107-0.161 0.0456-0.0488 0.0977-0.0863 0.156-0.112 0.0618-0.026 0.127-0.0391 0.195-0.0391h9c0.0683 0 0.132 0.013 0.19 0.0391 0.0618 0.026 0.116 0.0635 0.161 0.112 0.0456 0.0456 0.0814 0.0993 0.107 0.161 0.0261 0.0586 0.0391 0.122 0.0391 0.19s-0.013 0.133-0.0391 0.195c-0.026 0.0586-0.0618 0.111-0.107 0.156-0.0456 0.0456-0.0993 0.0814-0.161 0.107-0.0586 0.026-0.122 0.0391-0.19 0.0391h-9z" fill="currentColor" transform="translate(0 4)"/></svg>
+					</button>
+					<button class="icon" type="button" title="最大化" id="max-btn" disabled>
+						<svg fill="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m9.8 4h-3.6c-0.577 0-0.949 7.8e-4 -1.23 0.0239-0.272 0.0222-0.372 0.0599-0.422 0.0851-0.188 0.0959-0.341 0.249-0.437 0.437-0.0252 0.0494-0.0629 0.15-0.0851 0.422-0.0232 0.283-0.0239 0.656-0.0239 1.23v3.6c0 0.577 7.8e-4 0.949 0.0239 1.23 0.0222 0.272 0.0599 0.372 0.0851 0.422 0.0959 0.188 0.249 0.341 0.437 0.437 0.0494 0.0252 0.15 0.0629 0.422 0.0851 0.283 0.0231 0.656 0.0239 1.23 0.0239h3.6c0.577 0 0.949-8e-4 1.23-0.0239 0.272-0.0222 0.372-0.0599 0.422-0.0851 0.188-0.0959 0.341-0.249 0.437-0.437 0.0252-0.0495 0.0629-0.15 0.0851-0.422 0.0231-0.283 0.0239-0.656 0.0239-1.23v-3.6c0-0.577-8e-4 -0.949-0.0239-1.23-0.0222-0.272-0.0599-0.372-0.0851-0.422-0.0959-0.188-0.249-0.341-0.437-0.437-0.0495-0.0252-0.15-0.0629-0.422-0.0851-0.283-0.0232-0.656-0.0239-1.23-0.0239zm-6.58 0.092c-0.218 0.428-0.218 0.988-0.218 2.11v3.6c0 1.12 0 1.68 0.218 2.11 0.192 0.376 0.498 0.682 0.874 0.874 0.428 0.218 0.988 0.218 2.11 0.218h3.6c1.12 0 1.68 0 2.11-0.218 0.376-0.192 0.682-0.498 0.874-0.874 0.218-0.428 0.218-0.988 0.218-2.11v-3.6c0-1.12 0-1.68-0.218-2.11-0.192-0.376-0.498-0.682-0.874-0.874-0.428-0.218-0.988-0.218-2.11-0.218h-3.6c-1.12 0-1.68 0-2.11 0.218-0.376 0.192-0.682 0.498-0.874 0.874z" clip-rule="evenodd" fill="currentColor" fill-rule="evenodd"/></svg>
+					</button>
+					<button class="icon danger" type="button" title="关闭" id="close-btn">
+						<svg fill="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m8 8.71-4.15 4.15c-0.0976 0.0977-0.215 0.146-0.352 0.146-0.143 0-0.264-0.0472-0.361-0.142-0.0944-0.0977-0.142-0.218-0.142-0.361 0-0.137 0.0488-0.254 0.146-0.352l4.15-4.15-4.15-4.15c-0.0976-0.0976-0.146-0.216-0.146-0.356 0-0.0684 0.013-0.133 0.0391-0.195 0.026-0.0618 0.0618-0.114 0.107-0.156 0.0456-0.0456 0.0993-0.0814 0.161-0.107s0.127-0.0391 0.195-0.0391c0.137 0 0.254 0.0488 0.352 0.146l4.15 4.15 4.15-4.15c0.0977-0.0976 0.216-0.146 0.356-0.146 0.0683 0 0.132 0.013 0.19 0.0391 0.0618 0.026 0.116 0.0618 0.161 0.107 0.0456 0.0456 0.0814 0.0993 0.107 0.161 0.0261 0.0586 0.0391 0.122 0.0391 0.19 0 0.14-0.0488 0.259-0.146 0.356l-4.15 4.15 4.15 4.15c0.0977 0.0977 0.146 0.215 0.146 0.352 0 0.0683-0.013 0.133-0.0391 0.195-0.026 0.0618-0.0618 0.116-0.107 0.161-0.0423 0.0456-0.0944 0.0814-0.156 0.107-0.0619 0.0261-0.127 0.0391-0.195 0.0391-0.14 0-0.259-0.0488-0.356-0.146l-4.15-4.15z" fill="currentColor"/></svg>
+					</button>
+				</span>
+			</span>
+
+			<div class="content_box">
+				<form id="qtail-form">
+					<span><a href="https://github.com/latedreamdev/qtail-js" target="_blank" rel="noopener noreferrer">内核</a>版本: <span id="qtail-version"></span></span>
+					<p id="hitokoto">(^_^) 正在加载一言...</p>
+					<label for="nick">昵称 <font color="yellow">*</font> :</label>
+					<input type="text" id="nick" name="nick" placeholder="qtail" required />
+					<label for="tail">尾巴 <font color="yellow">*</font> :</label>
+					<input type="text" id="tail" name="tail" placeholder="喵~" required />
+					<p></p>
+					<span style="display: inline-flex; justify-content: space-between;"><label for="result">结果:</label><button title="复制" type="button" class="icon" id="copy-btn"><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m7.5 3c-1.38 0-2.5 1.12-2.5 2.5v8c0 1.38 1.12 2.5 2.5 2.5h6c1.38 0 2.5-1.12 2.5-2.5v-8c0-1.38-1.12-2.5-2.5-2.5h-6zm-1.5 2.5c0-0.828 0.672-1.5 1.5-1.5h6c0.828 0 1.5 0.672 1.5 1.5v8c0 0.828-0.672 1.5-1.5 1.5h-6c-0.828 0-1.5-0.672-1.5-1.5v-8z" clip-rule="evenodd" fill="currentColor" fill-rule="evenodd"/><path d="m8 6.5c0-0.276 0.224-0.5 0.5-0.5h4c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5h-4c-0.276 0-0.5-0.224-0.5-0.5z" fill="currentColor"/><path d="m8 9.5c0-0.276 0.224-0.5 0.5-0.5h4c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5h-4c-0.276 0-0.5-0.224-0.5-0.5z" fill="currentColor"/><path d="m8 12.5c0-0.276 0.224-0.5 0.5-0.5h3c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5h-3c-0.276 0-0.5-0.224-0.5-0.5z" fill="currentColor"/><path d="m0 2.5c0-1.38 1.12-2.5 2.5-2.5h6c0.979 0 1.83 0.562 2.24 1.38 0.152 0.303-0.104 0.618-0.443 0.618-0.227 0-0.422-0.149-0.549-0.338-0.269-0.399-0.726-0.662-1.24-0.662h-6c-0.828 0-1.5 0.672-1.5 1.5v8c0 0.828 0.672 1.5 1.5 1.5h1c0.276 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5h-1c-1.38 0-2.5-1.12-2.5-2.5v-8z" fill="currentColor"/></svg></button></span>
+					<input type="text" id="result" name="result" readonly />
+				</form>
+			</div>
+		</main>
+
+		<footer style="text-align: center;">
+			<span>
+				Copyright (c) 2024 <a href="https://latedream.us.kg/about/" target="_blank" rel="noopener noreferrer">LateDream</a>. All rights reserved. <br />
+				This website is not affiliated with Tencent or Qzone. &nbsp; <a href="https://github.com/latedreamdev/qtail" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+			</span>
+		</footer>
+
+		<script type="module" src="./src/index.ts"></script>
+	</body>
+</html>
